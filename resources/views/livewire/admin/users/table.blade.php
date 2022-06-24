@@ -32,9 +32,11 @@
                         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                             <p class="text-gray-900 whitespace-no-wrap">
                                 {{ $user->created_at->toFormattedDateString('d/m/Y H:i:s') }}
-                                <span class="text-sm text-gray-400">
-                                   ({{ $user->created_at->diffForHumans() }})
-                                </span>
+                                @if ($product->created_at->diff(now())->days <= 7)
+                                    <span class="text-sm text-gray-400">
+                                        ({{ $user->created_at->diffForHumans() }})
+                                    </span>
+                                @endif
                             </p>
                         </td>
 
