@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input:checked ~ .line {
+    @apply bg-gray-800;
+}
+input:checked ~ .dot {
+    transform: translateX(100%);
+}
+
+[x-cloak] {
+    display: none;
+}
+
+.filepond--credits {
+    display: none;
+}
+
+.filepond--root {
+    margin: 0 !important;
+}
+
+.is-loading{
+    @apply border-indigo-500 border-2 transition animate-pulse;
+}
