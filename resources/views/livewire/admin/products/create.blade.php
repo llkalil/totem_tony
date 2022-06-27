@@ -54,15 +54,25 @@
             </div>
         </div>
     </div>
-    <div class="mb-2">
-        <x-jet-label for="categories_id">Categoria</x-jet-label>
-        <x-select id="categories_id" wire:model.lazy="product.categories_id" class="block mt-1 w-full">
-            @forelse($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
-            @empty
+    <div class="mb-2 flex items-end gap-2">
+        <div class="w-11/12">
+            <x-jet-label for="categories_id">Categoria</x-jet-label>
+            <x-select id="categories_id" wire:model.lazy="product.categories_id" class="block mt-1 w-full">
+                @forelse($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @empty
 
-            @endforelse
-        </x-select>
+                @endforelse
+            </x-select>
+        </div>
+        <div class="w-1/12">
+            <x-jet-button onclick="Livewire.emit('openModal', 'admin.categories.create')">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+                </svg>
+            </x-jet-button>
+        </div>
     </div>
     <div class="flex gap-2 justify-end mt-4">
         <x-jet-secondary-button wire:click="$emit('closeModal')">Cancelar</x-jet-secondary-button>
