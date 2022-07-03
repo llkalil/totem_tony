@@ -18,7 +18,7 @@ Route::redirect('/', '/login');
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'verified'
+    'verified',
 ])->group(function () {
 
     // middleware admin
@@ -34,5 +34,6 @@ Route::middleware([
     // end middleware admin
 
     Route::view('/dashboard', 'pages.dashboard')->name('dashboard');
+    Route::view('/totens', 'pages.totens')->name('totens');
 
 });

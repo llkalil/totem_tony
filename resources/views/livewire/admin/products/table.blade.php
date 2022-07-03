@@ -130,7 +130,7 @@
                         </defs>
                     </svg>
                     <h1 class="text-xl  p-3">
-                        Nada encontrado, adicione uma categoria acima ou
+                        Nada encontrado, adicione um produto acima ou
                         <a
                                 onclick="Livewire.emit('openModal', 'admin.products.create')"
                                 class="text-gray-800 whitespace-no-wrap cursor-pointer hover:underline transition rounded font-bold">

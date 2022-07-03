@@ -5,16 +5,17 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^7.4|^8.0",
-        "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.75",
-        "laravel/jetstream": "^2.8",
-        "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.5",
-        "wire-elements/modal": "^1.0",
-      "ext-json": "*"
+      "php": "^7.4|^8.0",
+      "fruitcake/laravel-cors": "^2.0",
+      "guzzlehttp/guzzle": "^7.0.1",
+      "laravel/framework": "^8.75",
+      "laravel/jetstream": "^2.8",
+      "laravel/sanctum": "^2.11",
+      "laravel/tinker": "^2.5",
+      "livewire/livewire": "^2.5",
+      "wire-elements/modal": "^1.0",
+      "ext-json": "*",
+      "ext-curl": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
